@@ -1,11 +1,3 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
-  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
-  Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <stdio.h>
 
 int main()
@@ -14,10 +6,15 @@ int main()
 
     while (1) {
         printf("세 자리 정수를 입력하세요: ");
-        scanf("%d", &a);
-        while (getchar() != '\n');
 
-        if (a < 100) {
+        if (scanf("%d", &a) != 1) {
+            printf("정수가 아닙니다. 다시 입력하세요.\n");
+            while (getchar() != '\n'); // 버퍼 비우기
+            continue;
+        }
+
+        if (a < 100 || a > 999) {
+            printf("세 자리 정수가 아닙니다. 다시 입력하세요.\n");
             continue;
         }
 
