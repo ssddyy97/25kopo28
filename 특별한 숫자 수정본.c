@@ -17,16 +17,16 @@ int main()
             continue;
         }
         else if (a % 3 == 0 && a % 2 == 1) {
-            printf("특별한 숫자입니다");
+            printf("특별한 숫자입니다\n");
         }
         else if (result % 7 == 0) {
-            printf("특별한 숫자입니다");
+            printf("특별한 숫자입니다\n");
         }
         else if (b > d) {
-            printf("특별한 숫자입니다");
+            printf("특별한 숫자입니다\n");
         }
         else {
-            printf("보통숫자입니다");
+            printf("보통숫자입니다\n");
         }
     }
 
