@@ -1,10 +1,3 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
-  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
-  Code, Compile, Run and Debug online from anywhere in world.
-*******************************************************************************/
 #include <stdio.h>
 
 int main()
@@ -21,8 +14,9 @@ int main()
 
         int result = b + c + d;
 
-        if (a >= 1000 || a <= 0)
+        if (a >= 1000 || a <= 0) {
             continue;
+        }
         else if (a % 3 == 0 && a % 2 == 1) {
             printf("특별한 숫자입니다");
         }
@@ -39,3 +33,4 @@ int main()
 
     return 0;
 }
+
