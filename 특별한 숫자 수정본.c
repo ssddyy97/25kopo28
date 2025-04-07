@@ -3,7 +3,6 @@
 int main()
 {
     int a;
-
     while (1) {
         printf("숫자를 입력하세요.\n");
         scanf("%d", &a);
