@@ -15,21 +15,16 @@ int main()
 
         if (a >= 1000 || a <= 0) {
             continue;
-        }
-        else if (a % 3 == 0 && a % 2 == 1) {
+        } else if (a % 3 == 0 && a % 2 == 1) {
             printf("특별한 숫자입니다\n");
-        }
-        else if (result % 7 == 0) {
+        } else if (result % 7 == 0) {
             printf("특별한 숫자입니다\n");
-        }
-        else if (b > d) {
+        } else if (b > d) {
             printf("특별한 숫자입니다\n");
-        }
-        else {
+        } else {
             printf("보통숫자입니다\n");
         }
     }
 
     return 0;
 }
-
