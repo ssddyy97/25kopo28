@@ -7,8 +7,7 @@ void main()
     printf("숫자를 입력하세요.\n");
     scanf("%d", &a);
 
-    switch (a)
-    {
+    switch (a) {
         case 0:
             printf("A\n");
             break;
@@ -50,6 +49,6 @@ void main()
             break;
 
         default:
-            printf("잘못된 입력입니다");
+            printf("잘못된 입력입니다\n");
     }
 }
