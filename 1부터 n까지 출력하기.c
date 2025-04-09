@@ -18,7 +18,7 @@ void main()
     
     while(i < num){
      i++;
-    printf("%d ",i);
+     printf("%d ",i);
         
     }
 }
