@@ -8,17 +8,18 @@ Welcome to GDB Online.
 *******************************************************************************/
 #include <stdio.h>
 
-void main()
-
-{  
+int main() {
     int num;
+
     printf("숫자를 입력하세요 : ");
     scanf("%d", &num);
+
     int i = 0;
-    
-    while(i < num){
-     i++;
-     printf("%d ",i);
-        
+
+    while (i < num) {
+        i++;
+        printf("%d ", i);
     }
+
+    return 0;
 }
