@@ -18,6 +18,6 @@ void main()
         for (int j = num - i; j > 0; j--) {
             printf("*");
         }
-      printf("\n");
+        printf("\n");
     } 
 }
