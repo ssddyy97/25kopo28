@@ -17,8 +17,8 @@ void main()
     int i = 0;
     
     while(i < num){
-    i++;
-    if(i % 2 == 1){
+     i++;
+     if(i % 2 == 1){
         continue;
     }
     printf("%d ",i);
