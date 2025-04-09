@@ -14,11 +14,10 @@ void main()
     int num;
     printf("값을 입력하세요:");
     scanf("%d", &num);
-    for (int i = 0; i < num; i++){
-        for (int j = num - i; j > 0; j--){
+    for (int i = 0; i < num; i++) {
+        for (int j = num - i; j > 0; j--) {
             printf("*");
         }
-        
-    printf("\n");
+      printf("\n");
     } 
 }
