@@ -17,7 +17,7 @@ void main()
     int i = 0;
     
     while(i < num){
-    i++;
+     i++;
     printf("%d ",i);
         
     }
