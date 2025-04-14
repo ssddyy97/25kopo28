@@ -15,8 +15,9 @@ int main() {
         i++;
         if(i <= 3){
             printf("%d. %s / %d / %s / %s\n", i, name, *age, sex, hobby);
-        } else if (i >= 3) { printf("\n이름/나이/성별/취미 입력\n"); 
-            scanf("%s\n%d\n%s\n%s", name, age, sex, hobby);
+        } else if (i >= 3) { 
+          printf("\n이름/나이/성별/취미 입력\n"); 
+          scanf("%s\n%d\n%s\n%s", name, age, sex, hobby);
                 for (int j = 0; j < i; j++){
                     printf("%d. %s / %d / %s / %s\n", j + 1, *(g.n + j), *(g.a + j),* (g.s + j), *(g.h + j));
                 }
