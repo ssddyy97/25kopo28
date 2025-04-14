@@ -49,8 +49,7 @@ void print_all(int count) {
 
 void init_data() {
     for (int i = 0; i < 3; i++) {
-        printf("%d. %s / %d / %s / %s\n",
-               i + 1, g.n[i], g.a[i], g.s[i], g.h[i]);
+        printf("%d. %s / %d / %s / %s\n", i + 1, g.n[i], g.a[i], g.s[i], g.h[i]);
     }
 }
 
