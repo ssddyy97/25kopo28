@@ -24,10 +24,12 @@ void input_data(int i) {
             while (getchar() != '\n');
             continue;
         }
+        
         if (*age < 0) {
             printf("나이는 음수가 될 수 없습니다. 다시 입력해주세요.\n");
             continue;
         }
+        
         if (strcmp(sex, "m") != 0 && strcmp(sex, "f") != 0) {
             printf("성별은 'm' 또는 'f'로 입력해야 합니다. 다시 입력해주세요.\n");
             continue;
