@@ -27,11 +27,9 @@ void input_data(int i) {
         if (scanf("%d %9s %9s", age, sex, hobby) != 3) {
             printf("입력 형식이 잘못되었습니다. 다시 입력해주세요.\n");
             while (getchar() != '\n'); continue;
-        }
-        if (*age < 0) {
+        }if (*age < 0) {
             printf("나이는 음수가 될 수 없습니다. 다시 입력해주세요.\n"); continue;
-        }
-        if (strcmp(sex, "m") != 0 && strcmp(sex, "f") != 0) {
+        }if (strcmp(sex, "m") != 0 && strcmp(sex, "f") != 0) {
             printf("성별은 'm' 또는 'f'로 입력해야 합니다. 다시 입력해주세요.\n"); continue;
         }
         break;
