@@ -42,8 +42,7 @@ void input_data(int i) {
 void print_all(int count) {
     printf("\n 현재까지 입력된 정보:\n");
     for (int j = 0; j < count; j++) {
-        printf("%d. %s / %d / %s / %s\n",
-               j + 1, g.n[j], g.a[j], g.s[j], g.h[j]);
+        printf("%d. %s / %d / %s / %s\n", j + 1, g.n[j], g.a[j], g.s[j], g.h[j]);
     }
 }
 
