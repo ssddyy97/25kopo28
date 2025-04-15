@@ -9,8 +9,13 @@ enum month {jan = 1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec};
 char *month_names[] = {"", "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"};
 char *day_names[] = {"일", "월", "화", "수", "목", "금", "토"};
 
-void times(int year, int month, int day)
+
+void dday_from_ymd(int ymd)
 {
+    int year = ymd / 10000;
+    int month = (ymd / 100) % 100;
+    int day = ymd % 100;
+
     struct tm target = {0};
     time_t now_t = time(NULL);
     struct tm *now_tm = localtime(&now_t);
@@ -29,36 +34,25 @@ void times(int year, int month, int day)
 
     time_t target_t = mktime(&target);
     double diff_seconds = difftime(target_t, now_t);
-    int days_left = (int)(diff_seconds / (60 * 60 * 24));
-
-    if (days_left > 0){
-        printf("\nD-%d일 남았습니다.\n", days_left);
-    } else if (days_left == 0){
-        printf("\n오늘이 D-day입니다!\n");
-    } else {
-        printf("\nD+%d일 지났습니다.\n", -days_left);
-    }
+    int days = (int)(diff_seconds / (60 * 60 * 24));
+    
+    if (days > 0)
+        printf(" D-%d일 남았습니다.\n", days);
+    else if (days == 0)
+        printf("오늘이 D-day입니다!\n");
+    else
+        printf("D+%d일 지났습니다.\n", -days);
 }
 
-void calender(void)
+
+void calender(int year, int month)
 {
-    int end[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; 
-    int year, input_month, input_day;
-    enum month month;
+    int end[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    printf("year을 입력하세요: ");
-    scanf("%d", &year);
-    printf("month를 입력하세요: ");
-    scanf("%d", &input_month);
-    printf("day를 입력하세요: ");
-    scanf("%d", &input_day);
-
-    if (input_month < jan || input_month > dec) {
+    if (month < jan || month > dec) {
         printf("잘못된 월입니다.\n");
         return;
     }
-
-    month = (enum month)input_month;
 
     if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
         end[feb] = 29;
@@ -87,10 +81,9 @@ void calender(void)
         }
     }
 
-    printf("\n");
-
-    times(year, input_month, input_day);  
+    printf("\n\n");
 }
+
 
 int getStartDay(int year, int month)
 {
@@ -108,10 +101,27 @@ int getStartDay(int year, int month)
     return (h + 6) % 7;
 }
 
+
 int main() {
-    calender();  
+    int year, month, ymd;
+
+    printf("연도를 입력하세요: ");
+    scanf("%d", &year); 
+    printf("월을 입력하세요: ");
+    scanf("%d", &month); 
+    printf("날짜를 입력하세요: ");
+    scanf("%d", &ymd); 
+
+    calender(year, month);
+    dday_from_ymd(ymd);
+
     return 0;
 }
+
+
+
+
+
 
 
 
