@@ -6,8 +6,8 @@ int getStartDay(int year, int month);
 enum day {sun, mon, tue, wed, thu, fri, sat};
 enum month {jan = 1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec};
 
-char *month_names[] = {"", "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"};
-char *day_names[] = {"일", "월", "화", "수", "목", "금", "토"};
+char *month_names[] = {"", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+char *day_names[] = {"sun", "mon", "thu", "wed", "thu", "fri", "sat"};
 
 
 void dday_from_ymd(int ymd)
@@ -60,8 +60,8 @@ void calender(int year, int month)
 
     int week = getStartDay(year, month);
 
-    printf("\n\n        %d년 %s\n", year, month_names[month]);
-    printf("==========================\n");
+    printf("\n\n        %dYEAR \n%s\n", year, month_names[month]);
+    printf("=================================\n");
 
     for (int i = sun; i <= sat; i++) {
         printf("%s  ", day_names[i]);
@@ -73,7 +73,7 @@ void calender(int year, int month)
     }
 
     for (int d = 1; d <= end[month]; d++) {
-        printf("%2d  ", d);
+        printf("%3d  ", d);
         week++;
         if (week > sat) {
             printf("\n");
@@ -117,6 +117,7 @@ int main() {
 
     return 0;
 }
+
 
 
 
