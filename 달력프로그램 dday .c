@@ -62,10 +62,10 @@ void calender(int year, int month)
     int week = getStartDay(year, month);
 
     printf("\n\n           %d year \n%s\n", year, month_names[month]);
-    printf("=================================\n");
+    printf("============================\n");
 
     for (int i = sun; i <= sat; i++) {
-        printf("%s  ", day_names[i]);
+        printf("%4s", day_names[i]);
     }
     printf("\n");
 
@@ -74,7 +74,7 @@ void calender(int year, int month)
     }
 
     for (int d = 1; d <= end[month]; d++) {
-        printf("%3d  ", d);
+        printf("%4d", d);
         week++;
         if (week > sat) {
             printf("\n");
@@ -118,6 +118,9 @@ int main() {
 
     return 0;
 }
+
+
+
 
 
 
