@@ -7,7 +7,7 @@ enum day {sun, mon, tue, wed, thu, fri, sat};
 enum month {jan = 1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec};
 
 char *month_names[] = {"", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-char *day_names[] = {"sun", "mon", "thu", "wed", "thu", "fri", "sat"};
+char *day_names[] = {"s", "m", "t", "w", "t", "f", "s"};
 
 
 void dday_from_ymd(int ymd)
