@@ -36,12 +36,13 @@ void dday_from_ymd(int ymd)
     double diff_seconds = difftime(target_t, now_t);
     int days = (int)(diff_seconds / (60 * 60 * 24));
     
-    if (days > 0)
+    if (days > 0) {
         printf(" D-%d일 남았습니다.\n", days);
-    else if (days == 0)
+    } else if (days == 0) {
         printf("오늘이 D-day입니다!\n");
-    else
+    } else {
         printf("D+%d일 지났습니다.\n", -days);
+    }
 }
 
 
@@ -60,7 +61,7 @@ void calender(int year, int month)
 
     int week = getStartDay(year, month);
 
-    printf("\n\n        %dYEAR \n%s\n", year, month_names[month]);
+    printf("\n\n           %d year \n%s\n", year, month_names[month]);
     printf("=================================\n");
 
     for (int i = sun; i <= sat; i++) {
