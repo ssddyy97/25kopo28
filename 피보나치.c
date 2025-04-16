@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void main() {
-    int num;
+void fivo(int num) {
+    
     printf("입력값: ");
     scanf("%d", &num);
     printf("출력값: ");
@@ -38,4 +38,11 @@ void main() {
     }
     printf("\n합계: %d\n", sum);
     printf("\n홀수 짝수: %d/ %d", odd, even);
+}
+
+
+void main(){
+    int num;
+    fivo(num);
+    
 }
