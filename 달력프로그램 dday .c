@@ -103,18 +103,24 @@ int getStartDay(int year, int month)
 }
 
 
-int main() {
-    int year, month, ymd;
-
+void input_date(int *year, int *month, int *ymd) {
     printf("연도를 입력하세요: ");
-    scanf("%d", &year); 
+    scanf("%d", year);
+
     printf("월을 입력하세요: ");
-    scanf("%d", &month); 
-    printf("날짜를 입력하세요: ");
-    scanf("%d", &ymd); 
+    scanf("%d", month);
+
+    printf("날짜짜 형식) 입력: ");
+    scanf("%d", ymd);
+}
+
+int main() {
+    int year, month, day;
+
+    input_date(&year, &month, &day);
 
     calender(year, month);
-    dday_from_ymd(ymd);
+    dday_from_ymd(day);
 
     return 0;
 }
